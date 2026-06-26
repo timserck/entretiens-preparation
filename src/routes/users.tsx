@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/users")({
   component: Users,
@@ -21,6 +21,7 @@ function Users() {
           </Link>
         </div>
       ))}
+      <Outlet />
     </div>
   );
 }
